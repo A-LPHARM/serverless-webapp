@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import healthService from '../../services/healthService';
 import appointmentService from '../../services/appointmentService';
 
@@ -8,7 +8,7 @@ const BookAppointment = () => {
   const [selectedService, setSelectedService] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const history = useHistory();
+  const history = useNavigate();
 
   useEffect(() => {
     const fetchServices = async () => {
